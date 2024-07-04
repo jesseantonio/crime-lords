@@ -1,0 +1,70 @@
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+#container {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  background-color: #fff;
+  border: 2px solid #000;
+}
+
+@keyframes shoot {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -512px 0;
+  }
+}
+
+.death {
+  animation: shoot 0.5s steps(4) forwards;
+}
+
+.walk {
+  background: url('./Gangsters_1/Walk.png') 0 0;
+  animation: shoot 0.5s steps(4) infinite;
+}
+
+.hurt {
+  background: url('./Gangsters_1/Hurt.png') 0 0;
+  animation: shoot 0.5s steps(4);
+}
+
+.bullet {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  background: url('./Gangsters_1/bullet2.png') 0 0;
+  background-size: cover;
+}
+
+#movable {
+  width: 128px;
+  height: 128px;
+  position: absolute;
+  top: 225px;
+  left: 0px;
+  transition: top 0.1s, left 0.1s;
+  background-color: red;
+  background: url('./Gangsters_1/Idle.png') 0 0; /* URL do seu sprite
+  /* Adiciona uma transição suave */
+}
+
+
+#movable2 {
+  width: 128px;
+  height: 128px;
+  position: absolute;
+  top: 225px;
+  left: 225px;
+  transition: top 0.1s, left 0.1s;
+  background-color: red;
+  background: url('./Gangsters_1/Idle.png') 0 0; /* URL do seu sprite
+  /* Adiciona uma transição suave */
+}
